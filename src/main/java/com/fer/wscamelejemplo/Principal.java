@@ -14,7 +14,8 @@ import org.apache.camel.main.Main;
 public class Principal {
     public static void main(String[] args) {
         Main main = new Main();
-        
+        main.enableHangupSupport();
+       
         main.addRouteBuilder(RutaServicio.class);
         
         main.start();
