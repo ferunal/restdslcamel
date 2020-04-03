@@ -55,6 +55,7 @@ public class RutaServicio extends RouteBuilder {
                 
               //  .marshal(format)
                 //  choice().when()
+                .setHeader("dato", new SimpleExpression("${body[id]}"))
                 .log("Salida ${body}") //.setBody(new SimpleExpression("{\"salida\":\"ok\"}"))
                 ;
         //from("direct:salida").log("Salida ${body}").setBody(new SimpleExpression("{\"salida\":\"ok\"}"));
